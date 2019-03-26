@@ -1,0 +1,51 @@
+html { 
+    font-family: sans-serif; 
+}
+
+body { 
+    width: 100%; 
+    background-color: #eee;
+}
+
+.center img {
+    display:block;
+    margin:auto;
+}
+
+.form {
+    text-align: center;
+}
+
+.form-label {
+    margin-top: 2vh;
+}
+
+.pred {
+}
+
+.pred-title {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.pred-lines {
+    text-align: center;
+}
+
+.pred-line {
+    margin-bottom: 1vh;
+}
+
+.wrapper {
+    width: 50%;
+    min-width: 600px;
+    margin: 0 auto;
+    
+    border:1px solid #777;
+    border-radius: 1vh;
+    background-color: white;
+
+    padding: 1vh;
+    margin-top: 10vh;
+}

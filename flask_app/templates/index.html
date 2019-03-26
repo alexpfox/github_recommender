@@ -1,0 +1,87 @@
+<!doctype html>
+<title>User Explorer</title>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="center"><img src="/static/images/octo7.png" alt="GitHub"></div>
+
+        <div class="form">
+            <form>
+                <div class="form-label">
+                    Enter a GitHub username:
+                </div>
+                <input type="text" name="username">
+                <input type="submit">
+            </form>
+        </div>
+
+    {% if prediction %}
+        <div class="pred">
+            <div class="pred-lines">
+                    <div class="pred-line"><br>Users most similar to <b>{{ username }}</b>:<br></div>
+                {% for user in prediction %}
+                    <div class="pred-line">{{ user }} <br><br> </div>
+                {% endfor %}
+            </div>   
+    </div>
+    {% endif %}
+</body>
+
+<!--
+<!doctype html>
+<title>Hello from Flask</title>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="form">
+        <form>
+            <select name="author">
+                <option value="Wilde">Oscar Wilde</option>
+                <option value="Frost">Robert Frost</option>
+                <option value="Kaur">Rupi Kaur</option>
+                <option value="Eliot">T.S. Eliot</option>
+                <option value="Shakespeare">William Shakespeare</option>
+            </select>
+
+            <div class="form-label">
+                Enter a seed string: 
+            </div>
+            <input type="text" name="seed">
+            <input type="submit">
+        </form>
+    </div>
+
+    {% if poem %}
+    <div class="poem">
+        <div class="poem-title">
+            Here's what <i>{{ author }}</i> came up with for you....  <br>
+        </div>
+
+        <div class="poem-lines">
+            {% for line in poem %}
+                <div class="poem-line">{{ line }} <br><br> </div>
+            {% endfor %}
+        </div>   
+    </div>
+    {% endif %}
+</body>
+
+
+            <select name="Username">
+                <option value="Vassim">Vassim</option>
+                <option value="andrew">andrew</option>
+                <option value="dmd">dmd</option>
+                <option value="laincode">laincode</option>
+                <option value="aphyr">aphyr</option>
+                <option value="jacobian">jacobian</option>
+                <option value="robbyrussell">robbyrussell</option>
+                <option value="sebhtml">sebhtml</option>
+                <option value="chriscz">chriscz</option>
+                <option value="mitchellh">mitchellh</option>
+                <option value="alexpfox">robbyrussell</option>
+            </select>
+-->
